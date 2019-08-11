@@ -1,0 +1,30 @@
+// Projeto:Semáforo
+// ANDRE NASSIF 
+// ELE 3A
+int Verde = X;
+int Amarelo = Y;
+int Vermelho = Z;                   // X,Y e Z SÃO OS PINOS NO ARDUINO (HARDWARE) A SEREM ESCOLHIDOS
+ 
+void setup() 
+{
+  pinMode(Verde, OUTPUT);
+  pinMode(Amarelo, OUTPUT);
+  pinMode(Vermelho, OUTPUT);
+ 
+  digitalWrite(Verde, HIGH);               // Coloca na posição inicial. Somente o verde ligado
+  digitalWrite(Amarelo, LOW);
+  digitalWrite(Vermelho, LOW);
+}
+ 
+void loop()
+{
+  digitalWrite(Verde, HIGH);   
+  delay(20000);                      // Mantem o sinal verde aberto por 20 segundos
+  digitalWrite(Verde, LOW);
+  digitalWrite(Amarelo, HIGH);     // apaga o verde e acende o amarelo
+  delay(5000);                    // aguarda mais 5 segundos
+  digitalWrite(Amarelo, LOW);    // apaga o amarelo e acende o vermelho
+  digitalWrite(Vermelho, HIGH);
+  delay(20000);                // Apaga o sinal amarelo e acende o vermelho durante 20 segundos
+  digitalWrite(carroVermelho, LOW);  
+}
