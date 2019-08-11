@@ -25,6 +25,6 @@ void loop()
   delay(5000);                    // aguarda mais 5 segundos
   digitalWrite(Amarelo, LOW);    // apaga o amarelo e acende o vermelho
   digitalWrite(Vermelho, HIGH);
-  delay(20000);                // Apaga o sinal amarelo e acende o vermelho durante 20 segundos
+  delay(10000);                // Apaga o sinal amarelo e acende o vermelho durante 20 segundos
   digitalWrite(carroVermelho, LOW);  
 }
